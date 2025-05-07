@@ -43,7 +43,7 @@ Como estudante universitário, quero visualizar a disponibilidade das salas, par
 Como estudante universitário, quero poder reservar uma sala com antecedência, para que eu possa organizar a minha rotina de acordo com as minhas necessidades.
 
 **US03**  
-Como administrador, quero acessar o painel de controle, para que eu possa checar e aprovar as reservas e gerar relatórios de uso das salas.
+Como administrador, quero acessar o painel de controle, para que eu possa checar e aprovar as reservas para o uso das salas.
 
 ### Análise INVEST da User Story Prioritária
 
