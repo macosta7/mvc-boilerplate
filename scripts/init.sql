@@ -1,8 +1,3 @@
--- init.sql
-
--- Criar extensão para suportar UUIDs, se ainda não estiver ativada
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 CREATE TABLE usuarios (
   id_usuario SERIAL PRIMARY KEY,
   nm_usuario TEXT NOT NULL,
