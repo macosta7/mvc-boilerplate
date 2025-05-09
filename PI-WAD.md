@@ -31,7 +31,7 @@ A interface será desenvolvida com foco na usabilidade, garantindo que qualquer 
 
 <div align="center">
   <sub>Persona</sub><br>
-  <img src="../mvc-boilerplate/assets/persona-PI.png" width="85%">
+  <img src="assets/persona-PI.png" width="85%">
 </div>
 
 ### 2.2. User Stories
@@ -66,7 +66,7 @@ O modelo relacional a seguir apresenta a estrutura das tabelas do sistema de res
 
 <div align="center">
   <sub>Modelo Relacional</sub><br>
-  <img src="../mvc-boilerplate/assets/modelo-banco.png" width="85%">
+  <img src="assets/modelo-banco.png" width="85%">
 </div>
 
 #### Relações entre tabelas:
@@ -144,7 +144,7 @@ CREATE TABLE notificacoes (
 
 <div align="center">
   <sub>Wireframe Fluxo do Usuário</sub><br>
-  <img src="../mvc-boilerplate/assets/telas-projeto-individual-usuario.png" width="85%"><br>
+  <img src="assets/telas-projeto-individual-usuario.png" width="85%"><br>
   <a href="https://www.figma.com/design/ciAqelvhj4Sv3JKkpFbmJx/telas-projeto-individual?node-id=0-1&t=Wfa7iskOhhJL5R7h-1" target="_blank">
     <sup>Link Figma</sup>
   </a><br>
@@ -153,7 +153,7 @@ CREATE TABLE notificacoes (
 
 <div align="center">
   <sub>Wireframe Fluxo do Administrador</sub><br>
-  <img src="../mvc-boilerplate/assets/telas-projeto-individual-admin.png" width="85%"><br>
+  <img src="assets/telas-projeto-individual-admin.png" width="85%"><br>
     <a href="https://www.figma.com/design/ciAqelvhj4Sv3JKkpFbmJx/telas-projeto-individual?node-id=17-335&p=f" target="_blank">
     <sup>Link Figma</sup>
   </a><br>
