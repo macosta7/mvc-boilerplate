@@ -90,7 +90,7 @@ Como administrador, quero acessar o painel de controle, para que eu possa checar
   <a href="https://www.figma.com/design/ciAqelvhj4Sv3JKkpFbmJx/telas-projeto-individual?node-id=0-1&t=Wfa7iskOhhJL5R7h-1" target="_blank">
     <sup>Link Figma</sup>
   </a><br>
-  <sup>O wireframe do usuário contempla as funcionalidades descritas nas US01 e US02. Através da interface, o estudante pode realizar login, visualizar a disponibilidade das salas por data e horário (US01) e, a partir disso, realizar reservas de forma antecipada com base na sua preferência e necessidade (US02). A tela de cadastro e a área de edição de perfil reforçam a personalização da experiência do usuário, enquanto o sistema de notificações permite acompanhar o status das suas solicitações.</sup>
+  <sup>O wireframe do usuário contempla as funcionalidades descritas nas US01 e US02. Através da interface, o estudante pode realizar login, visualizar a disponibilidade das salas por data e horário (US01) e, a partir disso, realizar reservas de forma antecipada com base na sua preferência e necessidade (US02). A tela de cadastro e a de edição de perfil garantem uma personalização da experiência do usuário, enquanto a aba de notificações permite que o usuário acompanhe o status das suas solicitações.</sup>
 </div>
 
 <div align="center">
@@ -99,7 +99,7 @@ Como administrador, quero acessar o painel de controle, para que eu possa checar
     <a href="https://www.figma.com/design/ciAqelvhj4Sv3JKkpFbmJx/telas-projeto-individual?node-id=17-335&p=f" target="_blank">
     <sup>Link Figma</sup>
   </a><br>
-  <sup>O wireframe do administrador está alinhado à US03, oferecendo uma visão centralizada das solicitações de reserva por meio de um painel de controle. Nessa interface, o admin (recepção) consegue visualizar todos os pedidos de reserva com informações como nome do usuário, sala, horário, data e ocupação, além de ter a opção de aprovar ou rejeitar as solicitações. A funcionalidade de login e edição de perfil também estão presentes, garantindo segurança e controle de acesso.</sup>
+  <sup>O wireframe do administrador oferece uma visão centralizada das solicitações de reserva por meio de um painel de controle(US3). Nessa interface, o admin consegue visualizar todos os pedidos de reserva com informações como nome do usuário, sala, horário, data e ocupação para que ele possa priorizar as reservas e evitar conflitos de horário, além de ter a opção de aprovar ou rejeitar as solicitações. A funcionalidade de login e edição de perfil também estão presentes, garantindo segurança e controle de acesso.</sup>
 </div>
 
 ### 3.4. Guia de estilos (Semana 05)
