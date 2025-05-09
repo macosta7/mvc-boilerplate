@@ -60,11 +60,71 @@ Como administrador, quero acessar o painel de controle, para que eu possa checar
 
 ## <a name="c3"></a>3. Projeto da Aplicação Web
 
-### 3.1. Modelagem do banco de dados  (Semana 3)
+### 3.1. Modelagem do banco de dados
 
-*Posicione aqui os diagramas de modelos relacionais do seu banco de dados, apresentando todos os esquemas de tabelas e suas relações. Utilize texto para complementar suas explicações, se necessário.*
+O modelo relacional a seguir apresenta a estrutura das tabelas do sistema de reserva de salas, com seus respectivos campos e relacionamentos. O sistema foi modelado para garantir integridade referencial, evitar conflitos de agendamento e permitir notificações automáticas aos usuários.
 
-*Posicione também o modelo físico com o Schema do BD (arquivo .sql)*
+<div align="center">
+  <sub>Modelo Relacional</sub><br>
+  <img src="../mvc-boilerplate/assets/modelo-banco.png.png" width="85%">
+</div>
+
+#### Relações entre tabelas:
+
+- **usuarios** → contém as informações de login e perfil dos usuários
+- **salas** → define os ambientes disponíveis para reserva
+- **horarios** → representa os horários fixos por sala e dia da semana
+- **reservas** → associa usuários, salas, datas e horários em pedidos de reserva
+- **notificacoes** → envia mensagens relacionadas ao status das reservas
+
+As ligações entre tabelas utilizam chaves estrangeiras (`id_usuario`, `id_sala`, `id_horario`, `id_reserva`) para garantir consistência dos dados e facilitar o cruzamento de informações.
+
+---
+
+### Modelo Físico – Script SQL
+
+Abaixo está o schema do banco de dados em SQL, que pode ser executado em Supabase ou PostgreSQL:
+
+```sql
+CREATE TABLE usuarios (
+  id_usuario SERIAL PRIMARY KEY,
+  nm_usuario TEXT NOT NULL,
+  email_usuario TEXT UNIQUE NOT NULL,
+  ocupacao_usuario TEXT NOT NULL CHECK (ocupacao_usuario IN ('aluno', 'professor', 'coordenador', 'recepcao')),
+  senha_usuario TEXT NOT NULL
+);
+
+CREATE TABLE salas (
+  id_sala SERIAL PRIMARY KEY,
+  nm_sala TEXT NOT NULL
+);
+
+CREATE TABLE horarios (
+  id_horario SERIAL PRIMARY KEY,
+  id_sala INT REFERENCES salas(id_sala) ON DELETE CASCADE,
+  horario_inicio TIME NOT NULL,
+  horario_fim TIME NOT NULL,
+  dia_semana TEXT NOT NULL CHECK (dia_semana IN ('segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado', 'domingo'))
+);
+
+CREATE TABLE reservas (
+  id_reserva SERIAL PRIMARY KEY,
+  id_usuario INT REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
+  id_sala INT REFERENCES salas(id_sala) ON DELETE CASCADE,
+  data_reserva DATE NOT NULL,
+  id_horario INT REFERENCES horarios(id_horario) ON DELETE CASCADE,
+  status_reserva TEXT NOT NULL CHECK (status_reserva IN ('pendente', 'aprovada', 'rejeitada'))
+);
+
+CREATE TABLE notificacoes (
+  id_notificacao SERIAL PRIMARY KEY,
+  id_usuario INT REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
+  id_reserva INT REFERENCES reservas(id_reserva) ON DELETE CASCADE,
+  mensagem_notificacao TEXT NOT NULL,
+  visualizada_notificacao BOOLEAN DEFAULT FALSE,
+  data_notificacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
 
 ### 3.1.1 BD e Models (Semana 5)
 *Descreva aqui os Models implementados no sistema web*
