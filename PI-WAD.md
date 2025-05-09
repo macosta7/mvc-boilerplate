@@ -66,7 +66,7 @@ O modelo relacional a seguir apresenta a estrutura das tabelas do sistema de res
 
 <div align="center">
   <sub>Modelo Relacional</sub><br>
-  <img src="../mvc-boilerplate/assets/modelo-banco.png.png" width="85%">
+  <img src="../mvc-boilerplate/assets/modelo-banco.png" width="85%">
 </div>
 
 #### Relações entre tabelas:
