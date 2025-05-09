@@ -31,7 +31,7 @@ A interface será desenvolvida com foco na usabilidade, garantindo que qualquer 
 
 <div align="center">
   <sub>Persona</sub><br>
-  <img src="../mvc-boilerplate/assets/persona-PI.png" width="80%">
+  <img src="mvc-boilerplate/assets/persona-PI.png" width="80%">
 </div>
 
 ### 2.2. User Stories
@@ -86,7 +86,7 @@ Como administrador, quero acessar o painel de controle, para que eu possa checar
 
 <div align="center">
   <sub>Wireframe Fluxo do Usuário</sub><br>
-  <img src="../mvc-boilerplate/assets/telas-projeto-individual-usuario.png" width="80%"><br>
+  <img src="mvc-boilerplate/assets/telas-projeto-individual-usuario.png" width="80%"><br>
   <a href="https://www.figma.com/design/ciAqelvhj4Sv3JKkpFbmJx/telas-projeto-individual?node-id=0-1&t=Wfa7iskOhhJL5R7h-1" target="_blank">
     <sup>Link Figma</sup>
   </a><br>
@@ -95,7 +95,7 @@ Como administrador, quero acessar o painel de controle, para que eu possa checar
 
 <div align="center">
   <sub>Wireframe Fluxo do Administrador</sub><br>
-  <img src="../mvc-boilerplate\assets\telas-projeto-individual-admin.png" width="80%"><br>
+  <img src="mvc-boilerplate\assets\telas-projeto-individual-admin.png" width="80%"><br>
     <a href="https://www.figma.com/design/ciAqelvhj4Sv3JKkpFbmJx/telas-projeto-individual?node-id=17-335&p=f" target="_blank">
     <sup>Link Figma</sup>
   </a><br>
