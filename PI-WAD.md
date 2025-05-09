@@ -31,7 +31,7 @@ A interface será desenvolvida com foco na usabilidade, garantindo que qualquer 
 
 <div align="center">
   <sub>Persona</sub><br>
-  <img src="../mvc-boilerplate/assets/persona-PI.png" width="80%">
+  <img src="../mvc-boilerplate/assets/persona-PI.png" width="85%">
 </div>
 
 ### 2.2. User Stories
@@ -80,13 +80,11 @@ Como administrador, quero acessar o painel de controle, para que eu possa checar
   
 *Adicione as setas e explicações sobre como os dados fluem entre o Model, Controller e View.*
 
-### 3.3. Wireframes (Semana 03)
-
-*Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização).*
+### 3.3. Wireframes
 
 <div align="center">
   <sub>Wireframe Fluxo do Usuário</sub><br>
-  <img src="../mvc-boilerplate/assets/telas-projeto-individual-usuario.png" width="80%"><br>
+  <img src="../mvc-boilerplate/assets/telas-projeto-individual-usuario.png" width="85%"><br>
   <a href="https://www.figma.com/design/ciAqelvhj4Sv3JKkpFbmJx/telas-projeto-individual?node-id=0-1&t=Wfa7iskOhhJL5R7h-1" target="_blank">
     <sup>Link Figma</sup>
   </a><br>
@@ -95,11 +93,11 @@ Como administrador, quero acessar o painel de controle, para que eu possa checar
 
 <div align="center">
   <sub>Wireframe Fluxo do Administrador</sub><br>
-  <img src="../mvc-boilerplate/assets/telas-projeto-individual-admin.png" width="80%"><br>
+  <img src="../mvc-boilerplate/assets/telas-projeto-individual-admin.png" width="85%"><br>
     <a href="https://www.figma.com/design/ciAqelvhj4Sv3JKkpFbmJx/telas-projeto-individual?node-id=17-335&p=f" target="_blank">
     <sup>Link Figma</sup>
   </a><br>
-  <sup>O wireframe do administrador oferece uma visão centralizada das solicitações de reserva por meio de um painel de controle(US3). Nessa interface, o admin consegue visualizar todos os pedidos de reserva com informações como nome do usuário, sala, horário, data e ocupação para que ele possa priorizar as reservas e evitar conflitos de horário, além de ter a opção de aprovar ou rejeitar as solicitações. A funcionalidade de login e edição de perfil também estão presentes, garantindo segurança e controle de acesso.</sup>
+  <sup>O wireframe do administrador oferece uma visão centralizada das solicitações de reserva por meio de um painel de controle (US03). Nessa interface, o admin consegue visualizar todos os pedidos de reserva com informações como nome do usuário, sala, horário, data e ocupação para que ele possa priorizar as reservas e evitar conflitos de horário, além de ter a opção de aprovar ou rejeitar as solicitações. A funcionalidade de login e edição de perfil também estão presentes, garantindo segurança e controle de acesso.</sup>
 </div>
 
 ### 3.4. Guia de estilos (Semana 05)
