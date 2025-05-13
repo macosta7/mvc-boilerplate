@@ -1,83 +1,106 @@
-# Boilerplate MVC em Node.js com PostgreSQL
+# 🏫 Checkin Room
 
-Este projeto é um boilerplate básico para uma aplicação Node.js seguindo o padrão MVC (Model-View-Controller), utilizando PostgreSQL como banco de dados.
+Sistema web para automação do processo de **reserva de salas em ambientes acadêmicos**. A plataforma possibilita que estudantes, professores e coordenadores verifiquem a disponibilidade de salas em tempo real, realizem reservas com antecedência e recebam notificações automáticas quando a solicitação for aprovada ou recusada. Administradores têm acesso a um painel de controle com gestão de solicitações.
 
-## Requisitos
+---
 
-- Node.js (versão X.X.X)
-- PostgreSQL (versão X.X.X)
+## ✅ Funcionalidades
 
-## Instalação
+- Login para diferentes perfis de usuário (aluno, professor, coordenador, recepção)
+- Cadastro e edição de dados pessoais
+- Consulta de horários disponíveis por sala
+- Realização de reservas com data e horário
+- Painel administrativo com aprovações de solicitações
+- Notificações automáticas para usuários
+- Testes unitários com Jest
 
-1. **Clonar o repositório:**
+---
+
+## 📁 Estrutura de Pastas
+
+mvc-boilerplate/      
+│      
+├── config/ # Configurações, como conexão com o banco de dados     
+│ └── db.js     
+├── controllers/ # Lógica das requisições HTTP     
+│ └── aboutController.js      
+│ └── contactController.js      
+│ └── homeController.js      
+│ └── userController.js      
+├── models/ # Definições das entidades do banco (ORM ou SQL)       
+│ └── userModel.js       
+├── routes/ # Arquivos de rotas do sistema       
+│ └── index.js      
+│ └── frontRoutes.js       
+│ └── userRoutes.js       
+├── services/ # Funções reutilizáveis e lógicas de negócio        
+│ └── userService.js        
+├── assets/ # Imagens, fontes e arquivos públicos       
+├── scripts/ # Scripts JS públicos (front-end)       
+├── public/      
+│ └── css/       
+│ └─────style.css # Estilos CSS      
+├── tests/ # Testes unitários com Jest      
+│ └── userController.test.js      
+│ └── userModel.test.js     
+│ └── userRoutes.test.js       
+│ └── userService.test.js       
+├── views/ # Vizualização da aplicação       
+├── .gitignore # Arquivos/ pastas ignorados pelo Git       
+├── .env # Variáveis de ambiente       
+├── jest.config.js # Configuração do Jest para testes      
+├── package-lock.json # Lockfile do npm     
+├── package.json # Dependências e scripts do Node.js      
+├── PI-WAD.md # Arquivo da documentação do projeto     
+├── readme.md # Documentação do projeto      
+├── server.js # Inicialização do servidor Express      
+└── rest.http # Arquivo opcional para testes de API via VSCode      
+
+## ▶️ Como Executar o Projeto Localmente
+
+### 🔧 Pré-requisitos
+
+- [Node.js](https://nodejs.org/)
+- Banco de dados PostgreSQL ou Supabase
+- Um terminal compatível com comandos `npm`
+
+---
+
+### ⚙️ Instalação
+
+1. **Clone o repositório**
 
 ```bash
-   git clone https://github.com/seu-usuario/seu-projeto.git
-   cd seu-projeto
-```
+git clone https://github.com/macosta7/mvc-boilerplate.git
+cd mvc-boilerplate 
+```  
 
-2. **Instalar as dependências:**
-    
+2. **Instale as dependências**
 ```bash
 npm install
-```
-    
-3. **Configurar o arquivo `.env`:**
-    
-Renomeie o arquivo `.env.example` para `.env` e configure as variáveis de ambiente necessárias, como as configurações do banco de dados PostgreSQL.
-    
+npm init -y
+npm install express ejs
+```  
 
-Configuração do Banco de Dados
-------------------------------
+### 🗃️ Inicializar o Banco de Dados
 
-1. **Criar banco de dados:**
-    
-    Crie um banco de dados PostgreSQL com o nome especificado no seu arquivo `.env`.
-    
-2. **Executar o script SQL de inicialização:**
-    
+Antes de rodar a aplicação, inicialize o banco com o comando:
+
 ```bash
 npm run init-db
 ```
-    
-Isso criará a tabela `users` no seu banco de dados PostgreSQL com UUID como chave primária e inserirá alguns registros de exemplo.
-    
 
-Funcionalidades
----------------
+### 🚀 Executar o Servidor
 
-* **Padrão MVC:** Estrutura organizada em Model, View e Controller.
-* **PostgreSQL:** Banco de dados relacional utilizado para persistência dos dados.
-* **UUID:** Utilização de UUID como chave primária na tabela `users`.
-* **Scripts com `nodemon`:** Utilização do `nodemon` para reiniciar automaticamente o servidor após alterações no código.
-* **Testes:** Inclui estrutura básica para testes automatizados.
+1. Inicie a aplicação com:
 
-Scripts Disponíveis
--------------------
+```bash
+node app.js
+```
 
-* `npm start`: Inicia o servidor Node.js.
-* `npm run dev`: Inicia o servidor com `nodemon`, reiniciando automaticamente após alterações no código.
-* `npm run test`: Executa os testes automatizados.
-* `npm run test:coverage`: Executa os testes e gera um relatório de cobertura de código.
+2. O servidor estará rodando em:
 
-Estrutura de Diretórios
------------------------
+```arduino
+http://localhost:3000
+```
 
-* **`config/`**: Configurações do banco de dados e outras configurações do projeto.
-* **`controllers/`**: Controladores da aplicação (lógica de negócio).
-* **`models/`**: Modelos da aplicação (definições de dados e interações com o banco de dados).
-* **`routes/`**: Rotas da aplicação.
-* **`tests/`**: Testes automatizados.
-* **`views/`**: Views da aplicação (se aplicável).
-
-Contribuição
-------------
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir um issue ou enviar um pull request.
-
-Licença
--------
-
-Este projeto está licenciado sob a Licença MIT.
-
-Este README.md fornece uma visão geral clara do boilerplate, incluindo instruções de instalação, configuração do banco de dados, funcionalidades principais, scripts disponíveis, estrutura de diretórios, como contribuir e informações de licença. Certifique-se de personalizar as seções com detalhes específicos do seu projeto conforme necessário.
