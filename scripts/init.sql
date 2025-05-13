@@ -1,8 +1,3 @@
--- init.sql
-
--- Criar extensão para suportar UUIDs, se ainda não estiver ativada
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 -- Criar tabela de usuários com UUID como chave primária
 CREATE TABLE IF NOT EXISTS users (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
@@ -33,3 +28,12 @@ VALUES
   ('Rose Thompson', 'rose.thompson@example.com'),
   ('Samuel Perez', 'samuel.perez@example.com'),
   ('Tara Scott', 'tara.scott@example.com');
+
+CREATE TABLE IF NOT EXISTS curso (
+  id SERIAL PRIMARY KEY,
+  nome TEXT NOT NULL
+);
+
+ALTER TABLE aluno
+ADD COLUMN IF NOT EXISTS curso_id INTEGER,
+ADD CONSTRAINT fk_curso FOREIGN KEY (curso_id) REFERENCES curso(id) ON DELETE SET NULL;
